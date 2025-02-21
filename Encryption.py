@@ -10,8 +10,8 @@ def decode_pass(encoded_password):
     decoded_str = decode_bytes.decode()
     print(decoded_str)
 
-Password = input("Enter password to encrypt: ")
+Password = input("[+] Enter password to encrypt: ")
 encrypt_pass(Password)
 
-Password2 = input("Enter base64 encoded password to decode: ")
+Password2 = input("[+] Enter base64 encoded password to decode: ")
 decode_pass(Password2)

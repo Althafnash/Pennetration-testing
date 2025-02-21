@@ -1,14 +1,14 @@
 import socket
 from datetime import datetime
 
-target = input("Enter the target IP address: ")
+target = input("[+] Enter the target IP address: ")
 
 def port_scanner(target):
     try:
         ip = socket.gethostbyname(target)
 
-        print(f"Scanning the target {ip}")
-        print(f"Time started: {datetime.now()}")
+        print(f"[+] Scanning the target {ip}")
+        print(f"[+] Time started: {datetime.now()}")
 
         for port in range(20, 90):
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -18,8 +18,8 @@ def port_scanner(target):
                 print(f"Port {port} : open")
             sock.close()
     except socket.gaierror:
-        print("Host cannot be resolved")
+        print("[+] Host cannot be resolved")
     except socket.error:
-        print("Could not connect to the server")
+        print("[+] Could not connect to the server")
 
 port_scanner(target)

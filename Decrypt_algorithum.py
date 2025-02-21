@@ -1,6 +1,6 @@
 Alpha = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-key_code =  input("Enetr key code : ")
-Message = input("Enter the encrypted message : ")
+key_code =  input("[+] Enetr key code : ")
+Message = input("[+] Enter the encrypted message : ")
 
 def encrypt():
     encrypted_message = ""
@@ -19,5 +19,5 @@ def encrypt():
     return encrypted_message
 
 encrypted_message = encrypt()
-print(f"Original message: {Message}")
-print(f"Encrypted message: {encrypted_message}")
+print(f"[+] Original message: {Message}")
+print(f"[+] Encrypted message: {encrypted_message}")

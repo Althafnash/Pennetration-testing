@@ -14,7 +14,7 @@ def spider_urls(url, keyword):
     try:
         response = requests.get(url)
     except Exception as e:
-        print(f"Request failed: {url} - {e}")
+        print(f"[+] Request failed: {url} - {e}")
         return
     
     if response.status_code == 200:
@@ -39,6 +39,6 @@ def spider_urls(url, keyword):
             else:
                 pass
 
-url = input("Enter the URL you want to scrape: ")
-keyword = input("Enter the keyword to search in the URL: ")
+url = input("[+] Enter the URL you want to scrape: ")
+keyword = input("[+] Enter the keyword to search in the URL: ")
 spider_urls(url, keyword)
